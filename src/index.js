@@ -5,7 +5,7 @@ const ScreenHelper = require('./ScreenHelper.js');
 const verifyRepoConfig = async (repo, context) => {
   if (await repo.isConfigured(context)) return true;
 
-  ScreenHelper.alertError(context, 'Workspace não foi setado!');
+  ScreenHelper.alertError(context, 'Workspace was not set');
   return false;
 };
 
