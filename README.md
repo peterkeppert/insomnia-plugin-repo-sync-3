@@ -7,3 +7,7 @@ To use it, just install in your Insomnia Core application and go to > `Repo Sync
 Then you can go to `Repo Sync - Export Workspace` to instantly export your current workspace to your repo and can use `Repo Sync - Import Workspace` to import any repository changes on the current workspace. Each workspace will generate a `<workspace-name>.yml` file inside your repository.
 
 We suggest you to use it with a git repository where you can create versions of your workspaces configs.
+
+# History
+
+This plugin was forked from [insomnia-plugin-repo-syn](https://github.com/klickpages/insomnia-plugin-repo-sync) due to lack of active maintenance.
