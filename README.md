@@ -8,6 +8,18 @@ Then you can go to `Repo Sync - Export Workspace` to instantly export your curre
 
 We suggest you to use it with a git repository where you can create versions of your workspaces configs.
 
-# History
+## History
 
 This plugin was forked from [insomnia-plugin-repo-syn](https://github.com/klickpages/insomnia-plugin-repo-sync) due to lack of active maintenance.
+
+## Contributions
+
+Contributions are welcome.  Please open an issue to discuss your idea prior to sending a PR.
+
+## MIT License
+
+See https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2/LICENSE.
+
+## About Atlas LiftTech
+
+This library is sponsored by [Atlas Lift Tech](https://atlaslifttech.com/).  Atlas Lift Tech is a [safe patient handling and mobility (SPHM)](https://atlaslifttech.com/program-management/) solution provider, helping hospitals improve patient outcomes and improve patient mobility.
