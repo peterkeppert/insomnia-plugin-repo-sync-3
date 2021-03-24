@@ -10,7 +10,7 @@ We suggest you to use it with a git repository where you can create versions of 
 
 ## History
 
-This plugin was forked from [insomnia-plugin-repo-syn](https://github.com/klickpages/insomnia-plugin-repo-sync) due to lack of active maintenance.
+This plugin was forked from [insomnia-plugin-repo-sync](https://github.com/klickpages/insomnia-plugin-repo-sync) due to lack of active maintenance.
 
 ## Contributions
 
@@ -18,7 +18,7 @@ Contributions are welcome.  Please open an issue to discuss your idea prior to s
 
 ## MIT License
 
-See https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2/LICENSE.
+See https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2/blob/master/LICENSE.
 
 ## About Atlas LiftTech
 
