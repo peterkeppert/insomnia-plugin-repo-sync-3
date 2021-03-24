@@ -1,5 +1,5 @@
 {
-  "name": "avishnyak/insomnia-plugin-repo-sync-2",
+  "name": "insomnia-plugin-repo-sync-2",
   "version": "2.0.0",
   "author": "Anton Vishnyak <avishnyak@atlaslifttech.com>",
   "description": "Sync your workspace to a Git repository.",
