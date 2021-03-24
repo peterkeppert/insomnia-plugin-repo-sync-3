@@ -1,12 +1,12 @@
 {
-  "name": "@klicksite/insomnia-plugin-repo-sync",
-  "version": "0.1.0",
-  "author": "Klickpages <accounts@klickpages.com.br>",
-  "description": "Repo Sync Plugin for Insomnia",
+  "name": "avishnyak/insomnia-plugin-repo-sync-2",
+  "version": "2.0.0",
+  "author": "Anton Vishnyak <avishnyak@atlaslifttech.com>",
+  "description": "Sync your workspace to a Git repository.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klickpages/insomnia-plugin-repo-sync.git"
+    "url": "git+https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2.git"
   },
   "keywords": [
     "insomnia",
@@ -14,12 +14,12 @@
     "git"
   ],
   "bugs": {
-    "url": "https://github.com/klickpages/insomnia-plugin-repo-sync/issues"
+    "url": "https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2/issues"
   },
   "main": "src/index.js",
   "insomnia": {
     "name": "repo-sync",
-    "displayName": "Repo Sync Plugin",
+    "displayName": "Repo Sync Plugin v2",
     "description": "This plugin allows users to sync workspaces in a configured repository.",
     "images": {
       "icon": "icon.svg"
@@ -29,6 +29,6 @@
     }
   },
   "dependencies": {},
-  "homepage": "https://github.com/klickpages/insomnia-plugin-repo-sync#readme",
+  "homepage": "https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2#readme",
   "devDependencies": {}
 }
