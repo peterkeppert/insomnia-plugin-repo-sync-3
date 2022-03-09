@@ -18,13 +18,18 @@ module.exports.workspaceActions = [
       if (!(await verifyRepoConfig(repo, context))) return;
 
       const path = await repo.getPath();
-      const ex = await context.data.export.insomnia({
+      const rawJsonString = await context.data.export.insomnia({
         includePrivate: false,
-        format: 'yaml',
+        format: 'json',
         workspace: models.workspace,
       });
 
-      fs.writeFileSync(`${path}/${models.workspace.name}.yml`, ex);
+      const exported = JSON.parse(rawJsonString);
+
+      fs.writeFileSync(
+        `${path}/${models.workspace.name}.json`,
+        JSON.stringify(exported, null, 2)
+      );
     },
   },
   {
@@ -36,7 +41,7 @@ module.exports.workspaceActions = [
 
       const path = await repo.getPath();
       const imported = fs.readFileSync(
-        `${path}/${models.workspace.name}.yml`,
+        `${path}/${models.workspace.name}.json`,
         'utf8'
       );
 
