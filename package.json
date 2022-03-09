@@ -1,12 +1,12 @@
 {
-  "name": "insomnia-plugin-repo-sync-2",
-  "version": "2.0.1",
-  "author": "Anton Vishnyak <avishnyak@atlaslifttech.com>",
+  "name": "insomnia-plugin-repo-sync-3",
+  "version": "3.0.0",
+  "author": "Dotfile <contact@dotfile.com>",
   "description": "Sync your workspace to a Git repository.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2.git"
+    "url": "git+https://github.com/DotfileTech/insomnia-plugin-repo-sync-3.git"
   },
   "keywords": [
     "insomnia",
@@ -14,12 +14,12 @@
     "git"
   ],
   "bugs": {
-    "url": "https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2/issues"
+    "url": "https://github.com/DotfileTech/insomnia-plugin-repo-sync-3/issues"
   },
   "main": "src/index.js",
   "insomnia": {
-    "name": "repo-sync",
-    "displayName": "Repo Sync Plugin v2",
+    "name": "repo-sync-3",
+    "displayName": "Repo Sync Plugin v3",
     "description": "This plugin allows users to sync workspaces in a configured repository.",
     "images": {
       "icon": "icon.svg"
@@ -29,6 +29,6 @@
     }
   },
   "dependencies": {},
-  "homepage": "https://github.com/Atlas-LiftTech/insomnia-plugin-repo-sync-2#readme",
+  "homepage": "https://github.com/DotfileTech/insomnia-plugin-repo-sync-3#readme",
   "devDependencies": {}
 }
