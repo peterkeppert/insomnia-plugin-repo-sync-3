@@ -25,7 +25,7 @@ module.exports.workspaceActions = [
       });
 
       const exported = JSON.parse(rawJsonString);
-
+      
       exported.resources.forEach((resource) => {
         // Insomnia update the `modified` of a resource even when the resource
         // has only been open in the app. This is very noisy when reviewing
@@ -33,6 +33,14 @@ module.exports.workspaceActions = [
         // the exports
         if (resource.modified && resource.created) {
           resource.modified = resource.created;
+        }
+
+        // Secure cookie should not be sync because they could leak
+        // authentication credentials
+        if (resource._type === 'cookie_jar') {
+          resource.cookies = resource.cookies.filter(
+            (cookie) => !cookie.secure
+          );
         }
       });
 
