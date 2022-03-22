@@ -1,6 +1,8 @@
 const fs = require('fs');
 const WorkspaceRepo = require('./WorkspaceRepo.js');
 const ScreenHelper = require('./ScreenHelper.js');
+const ActiveWorkspace = require('./ActiveWorkspace.js');
+const WorkspaceSyncIndicator = require('./WorkspaceSyncIndicator.js');
 
 const verifyRepoConfig = async (repo, context) => {
   if (await repo.isConfigured(context)) return true;
@@ -48,6 +50,10 @@ module.exports.workspaceActions = [
         `${path}/${models.workspace.name}.json`,
         JSON.stringify(exported, null, 2)
       );
+
+      const activeWorkspace = new ActiveWorkspace(models.workspace._id);
+      const timestamp = activeWorkspace.getExportFileModified();
+      activeWorkspace.markSynced(timestamp);
     },
   },
   {
@@ -64,6 +70,9 @@ module.exports.workspaceActions = [
       );
 
       await context.data.import.raw(imported);
+
+      const activeWorkspace = new ActiveWorkspace(models.workspace._id);
+      activeWorkspace.markSynced();
     },
   },
   {
@@ -79,6 +88,18 @@ module.exports.workspaceActions = [
       if (repoPath == null) return;
 
       await repo.setPath(repoPath);
+
+      const activeWorkspace = new ActiveWorkspace(models.workspace._id);
+      activeWorkspace.setSyncPath(models.workspace.name, repoPath);
     },
   },
 ];
+
+const syncChecker = () => {
+  setTimeout(function () {
+    const workspaceSyncIndicator = new WorkspaceSyncIndicator();
+    workspaceSyncIndicator.refresh();
+    syncChecker();
+  }, 5000);
+}
+syncChecker();
