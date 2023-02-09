@@ -13,7 +13,7 @@ class WorkspaceSyncIndicator {
     }    
 
     // Outside of workspace.
-    if (!document.querySelector('li[data-testid="workspace"]')) {
+    if (localStorage.getItem("insomnia::meta::activity") !== '"debug"') {
       syncStateElement.innerHTML = '';
       return;
     }
